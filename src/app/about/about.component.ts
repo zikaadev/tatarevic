@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   version: string = environment.version;
   param = { value: 'world' };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 }

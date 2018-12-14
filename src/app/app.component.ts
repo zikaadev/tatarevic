@@ -16,7 +16,7 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  param = {value: 'world'};
+  param = { value: 'world' };
 
   constructor(
     private router: Router,

@@ -1,12 +1,73 @@
-<div class="container-fluid">
-  <div class="jumbotron text-center">
-    <h1>
-      {{'accept' | translate: param}}
-    </h1>
-    <app-loader [isLoading]="isLoading"></app-loader>
-    <div class="container">
-      tekst
+<div class="container text">
+  <div class="text-center">
+    <h1>{{ 'title1' | translate: param }}</h1>
+  </div>
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <div class="container text">
+    <h2>{{ 'subtitle1' | translate: param }}ents</h2>
+    <div class="mera-text">
+      {{ 'text1' | translate: param }}<br />
+      {{ 'text2' | translate: param }}<br />
+      {{ 'text3' | translate: param }}
     </div>
-    <button class="btn btn-secondary" (click)="goTo()">{{'submit' | translate: param}}</button>
+    <ol class="mera-text">
+      <li>{{ 'text4' | translate: param }}</li>
+      <li>{{ 'text5' | translate: param }}</li>
+      <li>{{ 'text6' | translate: param }}</li>
+      <li>{{ 'text7' | translate: param }}</li>
+      <li>{{ 'text8' | translate: param }}</li>
+      <li>{{ 'text9' | translate: param }}</li>
+      <li>{{ 'text10' | translate: param }}</li>
+    </ol>
+    <div class="mera-text">{{ 'text11' | translate: param }}</div>
+
+    <h2>{{ 'subtitle2' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text12' | translate: param }}</div>
+
+    <h2>{{ 'subtitle3' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text13' | translate: param }}</div>
+    <div class="mera-text">
+      The Company shall process the personal data following the requirements stipulated in DPA signed.
+    </div>
+
+    <h2>{{ 'subtitle4' | translate: param }}</h2>
+    <div class="mera-text">
+      {{ 'text14' | translate: param }}<br />
+      {{ 'text15' | translate: param }}<br />
+      {{ 'text16' | translate: param }}
+    </div>
+    <div class="mera-text">{{ 'text17' | translate: param }}<a href="#">[link]</a></div>
+    <ul class="mera-text">
+      <li>{{ 'text18' | translate: param }}</li>
+      <li>{{ 'text19' | translate: param }}</li>
+      <li>{{ 'text20' | translate: param }}<a href="#">[link]</a>.</li>
+    </ul>
+
+    <h2>{{ 'subtitle5' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text21' | translate: param }}<a href="#">[link]</a>.</div>
+
+    <h2>{{ 'subtitle6' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text22' | translate: param }}<a href="#">[link]</a>.</div>
+
+    <h2>{{ 'subtitle7' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text23' | translate: param }}<a href="#">[link]</a>.</div>
+
+    <h2>{{ 'subtitle8' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text24' | translate: param }}<a href="#">[link]</a>.</div>
+
+    <h2>{{ 'subtitle9' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text25' | translate: param }}</div>
+    <ol>
+      <li>{{ 'text26' | translate: param }}</li>
+      <li>{{ 'text27' | translate: param }}</li>
+      <li>{{ 'text28' | translate: param }}</li>
+    </ol>
+
+    <h2>{{ 'subtitle10' | translate: param }}</h2>
+    <div class="mera-text">{{ 'text29' | translate: param }}<a href="#">[link]</a>.</div>
+    <div class="mera-text"></div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary" (click)="goTo()">{{ 'submit' | translate: param }}</button>
   </div>
 </div>
