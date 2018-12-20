@@ -24,6 +24,6 @@ export class HomeComponent implements OnInit {
   //   }
 
   goTo() {
-    this.router.navigate(['/about']);
+    this.router.navigate(['/thank-you']);
   }
 }

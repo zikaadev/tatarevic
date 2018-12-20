@@ -7,8 +7,8 @@ import { Shell } from '@app/shell/shell.service';
 
 const routes: Routes = [
   Shell.childRoutes([
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent, data: { title: extract('Accept Terms & Conditions') } }
+    { path: '', redirectTo: '/policy-statement', pathMatch: 'full' },
+    { path: 'policy-statement', component: HomeComponent, data: { title: extract('Policy Statement') } }
   ])
 ];
 
