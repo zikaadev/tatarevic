@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +13,22 @@ export class HomeComponent implements OnInit {
   quote: string;
   isLoading: boolean;
   param = { value: 'world' };
+  accepted = false;
+  userEmail: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private homeService: HomeService, private activeRoute: ActivatedRoute) {
+    const routeParameters = this.activeRoute.params.subscribe((params: any) => {
+      this.userEmail = params['email'] ? params['email'] : '';
+    });
+  }
 
   ngOnInit() {}
 
-  // save() {
-  //     this.homeService.acceptTerms(this.selectedProduct).subscribe((res: any) => {
-  //       this.router.navigate(['/about']);
-  //     });
-  //   }
+  save() {
+    this.homeService.acceptTerms(this.accepted, this.userEmail).subscribe((res: any) => {
+      this.router.navigate(['/thank-you']);
+    });
+  }
 
   goTo() {
     this.router.navigate(['/thank-you']);
