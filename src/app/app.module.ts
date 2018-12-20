@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -13,6 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AboutModule } from './about/about.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -21,6 +23,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -36,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ShellModule,
     HomeModule,
     AboutModule,
+    SimpleNotificationsModule.forRoot(),
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],

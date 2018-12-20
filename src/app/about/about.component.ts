@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { environment } from '@env/environment';
+import { NotificationsService } from 'angular2-notifications';
 
 @Component({
   selector: 'app-about',
@@ -11,7 +12,7 @@ export class AboutComponent implements OnInit {
   version: string = environment.version;
   param = { value: 'world' };
 
-  constructor() {}
+  constructor(private notificationsService: NotificationsService) {}
 
   ngOnInit() {}
 }

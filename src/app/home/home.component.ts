@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
+import { NotificationsService } from 'angular2-notifications';
 
 import { Router, ActivatedRoute } from '@angular/router';
 import { HomeService } from './home.service';
@@ -16,7 +17,12 @@ export class HomeComponent implements OnInit {
   accepted = false;
   userEmail: string;
 
-  constructor(private router: Router, private homeService: HomeService, private activeRoute: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private homeService: HomeService,
+    private activeRoute: ActivatedRoute,
+    private notificationsService: NotificationsService
+  ) {
     const routeParameters = this.activeRoute.params.subscribe((params: any) => {
       this.userEmail = params['email'] ? params['email'] : '';
     });
@@ -25,6 +31,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   save() {
+    this.accepted = true;
     this.homeService.acceptTerms(this.accepted, this.userEmail).subscribe((res: any) => {
       this.router.navigate(['/thank-you']);
     });
