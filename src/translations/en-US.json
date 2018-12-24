@@ -49,9 +49,13 @@
   "text40": "to require the employer to view the data relating to him or to request a copy, update, supplement, update, delete he data as well as an interruption and temporary suspension of the processing operation;",
   "text41": "to delete the data if the purpose of the processing is not clearly defined, it changes and the person does not consent to the processing for a new purpose, if the purpose is achieved or if the realization becomes possible without processing the data, or if the collection or processing is done in an illegal manner.",
   "text42": "Data processing is allowed only for the purpose of the stated purpose and in accordance with the law.",
+  "text43": "You might be looking for non existing page. If you entered a web address please check if it was correct.",
+  "text44": "Please check your email for the right url.",
+  "text45": "In case you are intrerested in our bussiness click below button which will guide you to the home page.",
   "title1": "Policy Statement",
   "title2": "Thank you for submitting this form",
   "title3": "Notice about collection and use of personal data",
+  "title4": "Page Not Found (error 404)",
   "subtitle1": "General Statements",
   "subtitle2": "Confidentiality",
   "subtitle3": "Data Processing Agreement",
@@ -64,5 +68,6 @@
   "subtitle10": "Code of Conduct",
   "subtitle11": "Notice About Collection and Use of Personal Data",
   "copyright": "All rights reserved.",
-  "back": "Go Back"
+  "back": "Go Back",
+  "goToMera": "Go To MERA Homepage"
 }

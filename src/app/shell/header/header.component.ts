@@ -6,26 +6,30 @@ import { NotificationsService } from 'angular2-notifications';
 
 @Component({
   selector: 'app-header',
-  templateUrl: '<app-header (valueChange)="checkRightUrl($event)"></app-header>', // './header.component.html',
+  templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   menuHidden = true;
   currentUrl: string;
   @Input() rightUrl: boolean;
+  right: boolean;
 
   constructor(
     private i18nService: I18nService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private notificationsService: NotificationsService
-  ) {}
-
+  ) {
+    if (this.rightUrl) {
+      this.checkRightUrl(this.rightUrl);
+    }
+  }
   ngOnInit() {}
 
   checkRightUrl(event: boolean): boolean {
-    this.rightUrl = event;
-    console.log('right url emit: ' + this.rightUrl);
+    this.right = event;
+    console.log('right url emit: ' + this.right);
     return;
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { NotificationsService } from 'angular2-notifications';
 import { Router } from '@angular/router';
 
@@ -10,8 +10,11 @@ import { Router } from '@angular/router';
 export class NoticeComponent implements OnInit {
   isLoading: boolean;
   param = { value: 'world' };
+  @Output() rightUrl = new EventEmitter<boolean>();
 
-  constructor(private notificationsService: NotificationsService, private router: Router) {}
+  constructor(private notificationsService: NotificationsService, private router: Router) {
+    this.rightUrl.emit(false);
+  }
 
   ngOnInit() {}
 

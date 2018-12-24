@@ -31,11 +31,11 @@ export class HomeComponent implements OnInit {
     console.log(this.currentUrl);
     const routeParameters = this.activatedRoute.params.subscribe((params: any) => {
       if (params['email']) {
-        this.right = true;
-        this.rightUrl.emit(true);
-      } else {
-        this.right = false;
+        // this.right = true;
         this.rightUrl.emit(false);
+      } else {
+        // this.right = false;
+        this.rightUrl.emit(true);
       }
       console.log(this.right);
       this.userEmail = params['email'] ? params['email'] : '';
@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // goTo(link: string) {
-  //   this.router.navigate(['/' + link]);
-  // }
+  goTo(link: string) {
+    this.router.navigate([link]); // '/' +
+  }
 }
