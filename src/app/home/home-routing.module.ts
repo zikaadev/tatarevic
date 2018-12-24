@@ -4,10 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { extract } from '@app/core';
 import { HomeComponent } from './home.component';
 import { Shell } from '@app/shell/shell.service';
+import { WrongUrlComponent } from '@app/wrong-url/wrong-url.component';
 
 const routes: Routes = [
   Shell.childRoutes([
-    // { path: '', redirectTo: '/policy-statement/', pathMatch: 'full' },
+    { path: '', component: WrongUrlComponent, data: { title: extract('Wrong URL') } },
     { path: 'policy-statement/:email', component: HomeComponent, data: { title: extract('Policy Statement') } }
   ])
 ];

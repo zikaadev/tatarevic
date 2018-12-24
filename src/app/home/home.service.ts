@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { PersistenceService } from '@app/core/persistance.service';
 import { NotificationsService } from 'angular2-notifications';
+import { Customer } from '@app/core/customer.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class HomeService {
     private notificationsService: NotificationsService
   ) {}
 
-  acceptTerms(email: string) {
-    const body = JSON.stringify(email);
+  acceptTerms(customer: Customer) {
+    const body = JSON.stringify(customer);
     return this.http.put(this.apiUrl + this.serviceKey, body).pipe(
       map((res: any) => {
         return res as any;

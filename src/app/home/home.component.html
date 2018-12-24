@@ -1,10 +1,10 @@
-<div class="container text pageBody">
+<div class="container page-body">
   <div class="text-center">
     <h1>{{ 'title1' | translate: param }}</h1>
   </div>
   <app-loader [isLoading]="isLoading"></app-loader>
-  <div class="text left">
-    <h2>{{ 'subtitle1' | translate: param }}ents</h2>
+  <div class="text left spacing">
+    <h2>{{ 'subtitle1' | translate: param }}</h2>
     <div class="mera-text">
       {{ 'text1' | translate: param }}<br />
       {{ 'text2' | translate: param }}<br />
@@ -57,7 +57,7 @@
 
     <h2>{{ 'subtitle9' | translate: param }}</h2>
     <div class="mera-text">{{ 'text25' | translate: param }}</div>
-    <ol>
+    <ol class="mera-text">
       <li>{{ 'text26' | translate: param }}</li>
       <li>{{ 'text27' | translate: param }}</li>
       <li>{{ 'text28' | translate: param }}</li>
@@ -67,10 +67,7 @@
     <div class="mera-text">{{ 'text29' | translate: param }}<a href="#">[link]</a>.</div>
 
     <h2>{{ 'subtitle11' | translate: param }}</h2>
-    <div class="mera-text">
-      {{ 'text30' | translate: param }} <a href="/notice">[link]</a>.
-      <!-- href="assets/data-collection-notice.pdf" target="_blank" -->
-    </div>
+    <div class="mera-text">{{ 'text30' | translate: param }} <a href="/notice">[link]</a>.</div>
 
     <div class="mera-text"></div>
   </div>

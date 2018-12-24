@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bottom-line">
     <div class="container text">
-      <a class="" href="" translate><img src="./assets/mera-logo-160.png"/></a>
+      <a class="" href="" translate><img src="assets/mera-logo-160.png"/></a>
 
       <button
         class="navbar-toggler"
@@ -14,13 +14,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
-        <!-- <div class="navbar-nav">
-        <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
-          <i class="fas fa-home"></i>
-          <span translate>Home</span>
-        </a> -->
-        <div class="navbar-nav ml-auto" *ngIf="!right">
-          <!---->
+        <div class="navbar-nav ml-auto" *ngIf="activePage">
           <div class="nav-item" ngbDropdown placement="bottom-right">
             <a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{ currentLanguage }}</a>
             <div ngbDropdownMenu aria-labelledby="language-dropdown">

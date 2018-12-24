@@ -22,8 +22,17 @@ body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
     Droid Sans, Helvetica Neue, Arial, sans-serif;
 }
-.pageBody {
-  min-height: 800px;
+.page-body {
+  min-height: 700px;
+  font-size: 30px;
+}
+
+p {
+  margin-top: 30px;
+}
+
+.spacing {
+  margin-top: 50px;
 }
 h1 {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
@@ -31,6 +40,7 @@ h1 {
   color: #35484f;
   font-size: 24x;
   font-weight: 300;
+  text-align: center;
   text-transform: none !important;
   letter-spacing: 0.3em;
   box-sizing: border-box;

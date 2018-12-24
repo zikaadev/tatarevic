@@ -10,11 +10,8 @@ import { Router } from '@angular/router';
 export class NoticeComponent implements OnInit {
   isLoading: boolean;
   param = { value: 'world' };
-  @Output() rightUrl = new EventEmitter<boolean>();
 
-  constructor(private notificationsService: NotificationsService, private router: Router) {
-    this.rightUrl.emit(false);
-  }
+  constructor(private notificationsService: NotificationsService, private router: Router) {}
 
   ngOnInit() {}
 

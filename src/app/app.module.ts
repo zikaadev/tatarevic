@@ -11,7 +11,7 @@ import { SharedModule } from '@app/shared';
 import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { AboutModule } from './about/about.module';
+import { ThankYouModule } from './thank-you/thank-you.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SimpleNotificationsModule } from 'angular2-notifications';
@@ -44,7 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SharedModule,
     ShellModule,
     HomeModule,
-    AboutModule,
+    ThankYouModule,
     NoticeModule,
     WrongUrlModule,
     SimpleNotificationsModule.forRoot(),

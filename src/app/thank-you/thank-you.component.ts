@@ -4,11 +4,11 @@ import { environment } from '@env/environment';
 import { NotificationsService } from 'angular2-notifications';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  selector: 'app-thank-you',
+  templateUrl: './thank-you.component.html',
+  styleUrls: ['./thank-you.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class ThankYouComponent implements OnInit {
   version: string = environment.version;
   param = { value: 'world' };
 

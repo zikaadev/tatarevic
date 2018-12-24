@@ -11,9 +11,7 @@ import { NotificationsService } from 'angular2-notifications';
 })
 export class HeaderComponent implements OnInit {
   menuHidden = true;
-  currentUrl: string;
-  @Input() rightUrl: boolean;
-  right: boolean;
+  activePage = true;
 
   constructor(
     private i18nService: I18nService,
@@ -21,17 +19,12 @@ export class HeaderComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private notificationsService: NotificationsService
   ) {
-    if (this.rightUrl) {
-      this.checkRightUrl(this.rightUrl);
+    if (this.router.url.indexOf('/policy-statement/') > -1) {
+      this.activePage = false;
     }
   }
-  ngOnInit() {}
 
-  checkRightUrl(event: boolean): boolean {
-    this.right = event;
-    console.log('right url emit: ' + this.right);
-    return;
-  }
+  ngOnInit() {}
 
   toggleMenu() {
     this.menuHidden = !this.menuHidden;

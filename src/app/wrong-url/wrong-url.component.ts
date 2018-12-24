@@ -17,7 +17,6 @@ export class WrongUrlComponent implements OnInit {
   ngOnInit() {}
 
   goTo(link: string) {
-    // this.router.navigate([link]);
     window.location.href = link;
   }
 }
