@@ -68,13 +68,14 @@
 
     <h2>{{ 'subtitle11' | translate: param }}</h2>
     <div class="mera-text">
-      {{ 'text30' | translate: param }}<a href="assets/data-collection-notice.pdf" target="_blank">[link]</a>.
+      {{ 'text30' | translate: param }} <a href="/notice">[link]</a>.
+      <!-- href="assets/data-collection-notice.pdf" target="_blank" -->
     </div>
 
     <div class="mera-text"></div>
   </div>
   <div class="text-center">
-    <button class="btn btn-primary" (click)="goTo()">{{ 'submit' | translate: param }}</button>
+    <button class="btn btn-primary" (click)="save()">{{ 'submit' | translate: param }}</button>
   </div>
 </div>
 <simple-notifications></simple-notifications>

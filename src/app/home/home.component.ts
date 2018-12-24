@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { NotificationsService } from 'angular2-notifications';
 
@@ -15,16 +15,33 @@ export class HomeComponent implements OnInit {
   isLoading: boolean;
   param = { value: 'world' };
   accepted = false;
+  hasEmailInRoute: boolean;
   userEmail: string;
+  right: boolean;
+  @Output() rightUrl = new EventEmitter<boolean>();
+  currentUrl: string;
 
   constructor(
     private router: Router,
     private homeService: HomeService,
-    private activeRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private notificationsService: NotificationsService
   ) {
-    const routeParameters = this.activeRoute.params.subscribe((params: any) => {
+    this.currentUrl = router.url;
+    console.log(this.currentUrl);
+    const routeParameters = this.activatedRoute.params.subscribe((params: any) => {
+      if (params['email']) {
+        this.right = true;
+        this.rightUrl.emit(true);
+      } else {
+        this.right = false;
+        this.rightUrl.emit(false);
+      }
+      console.log(this.right);
       this.userEmail = params['email'] ? params['email'] : '';
+      if (this.userEmail) {
+        console.log('Email:', this.userEmail);
+      }
     });
   }
 
@@ -37,7 +54,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  goTo() {
-    this.router.navigate(['/thank-you']);
-  }
+  // goTo(link: string) {
+  //   this.router.navigate(['/' + link]);
+  // }
 }

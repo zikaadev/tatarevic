@@ -2,14 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { extract } from '@app/core';
-import { HomeComponent } from './home.component';
+import { NoticeComponent } from './notice.component';
 import { Shell } from '@app/shell/shell.service';
 
 const routes: Routes = [
-  Shell.childRoutes([
-    // { path: '', redirectTo: '/policy-statement/', pathMatch: 'full' },
-    { path: 'policy-statement/:email', component: HomeComponent, data: { title: extract('Policy Statement') } }
-  ])
+  Shell.childRoutes([{ path: 'notice', component: NoticeComponent, data: { title: extract('Notice') } }])
 ];
 
 @NgModule({
@@ -17,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class HomeRoutingModule {}
+export class NoticeRoutingModule {}
