@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class WrongUrlComponent implements OnInit {
   @Output() rightUrl = new EventEmitter<boolean>();
+  param = { value: 'world' };
 
   constructor(private router: Router) {
     this.rightUrl.emit(false);

@@ -8,8 +8,8 @@ import { NotificationsService } from 'angular2-notifications';
   providedIn: 'root'
 })
 export class HomeService {
-  // apiUrl = 'http://188.130.168.104';
   apiUrl = this.persistenceService.apiUrl;
+  serviceKey = '/acceptance';
 
   constructor(
     private http: HttpClient,
@@ -17,8 +17,9 @@ export class HomeService {
     private notificationsService: NotificationsService
   ) {}
 
-  acceptTerms(accepted: boolean, email: string) {
-    return this.http.post(this.apiUrl, accepted).pipe(
+  acceptTerms(email: string) {
+    const body = JSON.stringify(email);
+    return this.http.put(this.apiUrl + this.serviceKey, body).pipe(
       map((res: any) => {
         return res as any;
         this.notificationsService.success('Ok', 'Okk', {

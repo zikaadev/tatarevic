@@ -48,8 +48,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   save() {
-    this.accepted = true;
-    this.homeService.acceptTerms(this.accepted, this.userEmail).subscribe((res: any) => {
+    // this.accepted = true;
+    this.homeService.acceptTerms(this.userEmail).subscribe((res: any) => {
+      console.log('uspelo');
       this.router.navigate(['/thank-you']);
     });
   }
